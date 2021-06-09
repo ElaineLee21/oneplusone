@@ -37,7 +37,7 @@
             let username = $("#input-username").val()
             let password = $("#input-password").val()
 
-            if (username == "") {
+            if (username === "") {
                 $("#help-id-login").text("아이디를 입력해주세요.")
                 $("#input-username").focus()
                 return;
@@ -45,7 +45,7 @@
                 $("#help-id-login").text("")
             }
 
-            if (password == "") {
+            if (password === "") {
                 $("#help-password-login").text("비밀번호를 입력해주세요.")
                 $("#input-password").focus()
                 return;
@@ -78,7 +78,8 @@
             $("#help-id").toggleClass("is-hidden")
             $("#help-password").toggleClass("is-hidden")
             $("#help-password2").toggleClass("is-hidden")
-
+        }
+        
     </script>
 
 </head>
@@ -122,7 +123,7 @@
                     </div>
                     <div id="div-sign-in-or-up" class="has-text-centered">
                         <nav class="level is-mobile">
-                            <button class="level-item button is-sparta" onclick="sign_in()">
+                            <button class="level-item button is-sparta" onclick="sign_in()" >
                                 로그인
                             </button>
 

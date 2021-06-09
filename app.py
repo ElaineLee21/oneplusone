@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 from flask import Flask, render_template, request, redirect, url_for, jsonify
-from datetime import datetime, timedelta, hashlib
+from datetime import datetime, timedelta
 import jwt
 import hashlib
 
@@ -107,7 +107,7 @@ def api_login():
     if result is not None:
         payload = {
             'id': id_receive,
-            'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
+            'exp': datetime.utcnow() + datetime.timedelta(hours=1)
         }
         token = jwt.encode(payload, SECRET_KEY, algorithm='HS256').decode('utf-8')
         return jsonify({'result': 'success', 'token': token})
