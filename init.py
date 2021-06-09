@@ -62,6 +62,7 @@ def get_lists():
 def insert_item():
     ## 몽고db 삭제
     db.product.drop()
+    db.likes.drop()
     ## 자료얻어오기
     try:
         get_lists()

@@ -25,6 +25,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+
+    <!-- $.cookie is not a function 에러발생시 추가 스크립트 -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+
     <style>
         .cards {
             width: 1300px;
@@ -73,14 +78,17 @@
         <div class="in">
             <a href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i>LogIN</a>
         </div>
+        <div class="in">
+            <button onclick="onClickLogOut()" ><i class="fa fa-sign-in" aria-hidden="true"></i>LogOut</button>
+        </div>
     </div>
     <div class="buttons">
         <button onclick="location.href='/'" class="button is-primary is-light"> ALL</button>
-        <button class="button is-link is-light">CU</button>
-        <button class="button is-info is-light">GS25</button>
-        <button class="button is-success is-light">7-ELEVEN</button>
-        <button class="button is-warning is-light">MINISTOP</button>
-        <button class="button is-danger is-light">EMART24</button>
+        <button onclick="handleButtonClick('CU')" class="button is-link is-light">CU</button>
+        <button onclick="handleButtonClick('GS25')" class="button is-info is-light">GS25</button>
+        <button onclick="handleButtonClick('7-ELEVEN')" class="button is-success is-light">7-ELEVEN</button>
+        <button onclick="handleButtonClick('MINISTOP')" class="button is-warning is-light">MINISTOP</button>
+        <button onclick="handleButtonClick('EMART24')" class="button is-danger is-light">EMART24</button>
     </div>
     <div class="cards" id="post-box">
         <div class="card" style="width: 18rem;">

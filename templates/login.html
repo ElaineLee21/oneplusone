@@ -79,7 +79,6 @@
             $("#help-password2").toggleClass("is-hidden")
         }
 
-
         function sign_up() {
             let username = $("#input-username").val()
             let password = $("#input-password").val()
@@ -117,7 +116,7 @@
             }
             $.ajax({
                 type: "POST",
-                url: "/sign_up/save",
+                url: "/sign_up",
                 data: {
                     username_give: username,
                     password_give: password
@@ -142,7 +141,7 @@
         function check_dup() {
             let username = $("#input-username").val()
 
-            if (username == "") {
+            if (username === "") {
                 $("#help-id").text("아이디를 입력해주세요.").removeClass("is-safe").addClass("is-danger")
                 $("#input-username").focus()
                 return;
