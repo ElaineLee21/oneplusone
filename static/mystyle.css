@@ -1,0 +1,33 @@
+.jumbotron {
+    background-image: url('cvs.png');
+    background-size: auto 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.display-4 {
+    width: 300px;
+    margin: auto;
+}
+
+.lead {
+    width: 400px;
+    margin: auto;
+    padding-top: 10px;
+
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.buttons {
+    width: 600px;
+    margin: auto;
+}
+
+.in {
+    width: 200px;
+    margin: 0px 400px 0px auto;
+    word-spacing: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+

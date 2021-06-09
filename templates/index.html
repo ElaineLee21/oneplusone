@@ -2,9 +2,190 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>One+One</title>
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link href='{{ url_for("static", filename="mystyle.css") }}' rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <style>
+        .cards {
+            width: 1300px;
+            margin: 50px auto 200px auto;
+        }
+        .card {
+            float: left;
+            margin: 10px;
+        }
+        .card-text {
+            width: 200px;
+            margin: auto;
+            word-spacing: 20px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .btn {
+            color: #fff;
+            background-color: #e8344e;
+            border-color: #e8344e;
+        }
+        .btn-outline {
+            color: #e8344e;
+            background-color: transparent;
+            background-image: none;
+            border-color: transparent;
+        }
+    </style>
+
+    <script>
+        // function like_bev(id) {
+        //     $.ajax({
+        //         type: 'POST',
+        //         url: '/api/like',
+        //         data: {sample_give: '샘플데이터'},
+        //         success: function (response) {
+        //             alert(response['msg']);
+        //         }
+        //     });
+        // }
+    </script>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div onclick="window.location.href='/'" class="container">
+            <h1 class="display-4">One+One</h1>
+            <p class="lead">Convenient page for Convenience store</p>
+        </div>
+        <div class="in">
+            <a href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i>LogIN</a>
+        </div>
+    </div>
+    <div class="buttons">
+        <button onclick="location.href='/'" class="button is-primary is-light"> ALL</button>
+        <button class="button is-link is-light">CU</button>
+        <button class="button is-info is-light">GS25</button>
+        <button class="button is-success is-light">7-ELEVEN</button>
+        <button class="button is-warning is-light">MINISTOP</button>
+        <button class="button is-danger is-light">EMART24</button>
+    </div>
+    <div class="cards">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
+                 alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">솔의눈 12,500₩
+                    <button class="btn btn-outline" onclick="like_bev()"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                </p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
+                 alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">솔의눈 12,500₩
+                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                </p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
+                 alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">솔의눈 12,500₩
+                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                </p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
+                 alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">솔의눈 12,500₩
+                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                </p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
+                 alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">솔의눈 12,500₩
+                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                </p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
+                 alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">솔의눈 12,500₩
+                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                </p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
+                 alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">솔의눈 12,500₩
+                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                </p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
+                 alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">솔의눈 12,500₩
+                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                </p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
+                 alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">솔의눈 12,500₩
+                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                </p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
+                 alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">솔의눈 12,500₩
+                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                </p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
+                 alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">솔의눈 12,500₩
+                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
