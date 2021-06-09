@@ -31,3 +31,20 @@
     font-weight: bold;
 }
 
+.card-img-top{
+    width: 205;
+    height: 260;
+    background-position: center;
+    background-size: cover;
+}
+
+.price_like_box{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+p{
+    text-align: center;
+
+}
+

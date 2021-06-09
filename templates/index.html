@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
           crossorigin="anonymous">
-    <link href='{{ url_for("static", filename="mystyle.css") }}' rel="stylesheet">
+    <link href="{{ url_for('static', filename='mystyle.css') }}" rel="stylesheet" >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -54,17 +54,13 @@
         }
     </style>
 
+    <!-- 자바스크립트 함수 통합파일 -->
+    <script src="{{ url_for('static', filename='myjs.js') }}"></script>
     <script>
-        // function like_bev(id) {
-        //     $.ajax({
-        //         type: 'POST',
-        //         url: '/api/like',
-        //         data: {sample_give: '샘플데이터'},
-        //         success: function (response) {
-        //             alert(response['msg']);
-        //         }
-        //     });
-        // }
+        // 자바스크립트 함수 통합파일 내에 get_post 함수를 사용
+        $(document).ready(function () {
+            get_beverages()
+        })
     </script>
 </head>
 
@@ -86,7 +82,7 @@
         <button class="button is-warning is-light">MINISTOP</button>
         <button class="button is-danger is-light">EMART24</button>
     </div>
-    <div class="cards">
+    <div class="cards" id="post-box">
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
                  alt="Card image cap">
@@ -96,96 +92,8 @@
                 </p>
             </div>
         </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
-                 alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">솔의눈 12,500₩
-                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                </p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
-                 alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">솔의눈 12,500₩
-                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                </p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
-                 alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">솔의눈 12,500₩
-                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                </p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
-                 alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">솔의눈 12,500₩
-                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                </p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
-                 alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">솔의눈 12,500₩
-                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                </p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
-                 alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">솔의눈 12,500₩
-                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                </p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
-                 alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">솔의눈 12,500₩
-                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                </p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
-                 alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">솔의눈 12,500₩
-                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                </p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
-                 alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">솔의눈 12,500₩
-                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                </p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://simage.lottechilsung.co.kr/goods/31/12/85/07/1861_N_N_590.jpg"
-                 alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">솔의눈 12,500₩
-                    <button class="btn btn-outline"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                </p>
-            </div>
-        </div>
+
+
     </div>
 </body>
 </html>
