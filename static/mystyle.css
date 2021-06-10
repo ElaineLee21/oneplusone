@@ -10,7 +10,7 @@
 }
 
 .lead {
-    width: 400px;
+    width: 520px;
     margin: auto;
     padding-top: 10px;
 
@@ -23,28 +23,107 @@
     margin: auto;
 }
 
-.in {
+.inout {
     width: 200px;
-    margin: 0px 400px 0px auto;
+    margin: 10px 200px 0px auto;
     word-spacing: 20px;
     letter-spacing: 1px;
     font-weight: bold;
 }
 
-.card-img-top{
-    width: 205;
-    height: 260;
-    background-position: center;
-    background-size: cover;
+/*.logout-btn {*/
+/*    color: blue;*/
+/*    background-color: #e8344e;*/
+/*    border-color: #e8344e;*/
+/*    padding: 1px 10px;*/
+/*}*/
+
+.inout-btn {
+    color: #3c87cb;
+    background-color: transparent;
+    background-image: none;
+    border-color: transparent;
+    font-family: 'Poppins', sans-serif;
 }
 
-.price_like_box{
+
+.cards {
+    width: 1300px;
+    margin: 50px auto 200px auto;
+}
+
+.card {
+    float: left;
+    margin: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.card_cvs {
+    /*background-color: blue;*/
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.card-img-top {
+    width: 280px;
+    height: 260px;
+    object-fit: contain;
+}
+
+.product_name {
+    font-weight: bolder;
+}
+
+.price_like {
     display: flex;
     justify-content: center;
     align-content: center;
 }
-p{
-    text-align: center;
 
+.btn {
+    color: #fff;
+    background-color: #e8344e;
+    border-color: #e8344e;
+    padding: 1px 10px;
 }
 
+.btn-outline {
+    color: #e8344e;
+    background-color: transparent;
+    background-image: none;
+    border-color: transparent;
+}
+
+p {
+    text-align: center;
+}
+
+.section {
+    padding: 1rem 1.5rem;
+    max-width: 750px;
+    margin: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.is-sparta {
+    color: #8F8787 !important;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.button.is-sparta {
+    background-color: #FFD3B6;
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.button.is-sparta.is-outlined {
+    background-color: transparent;
+    border-color: #F8B595;
+    color: #F8B595 !important;
+}
+
+.help {
+    color: gray;
+    font-family: 'Noto Sans KR', sans-serif;
+}

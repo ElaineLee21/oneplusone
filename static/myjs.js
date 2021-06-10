@@ -60,24 +60,21 @@ function get_beverages() {
                     let class_heart = post['like_by_me'] ? "fa-heart" : "fa-heart-o"
 
                     let html_temp = `
-                                            <div id= ${eachId} class="card" style="width: 18rem; height: 25rem;">
-                                            <p>${conveni_store}</p>
-                                                <img class="card-img-top" src="${product_img}" alt="Card image cap">
-                                                <div class="card-body">
-                                                   <p class="card-text">${product_name}</p>
-                                                   <div class="price_like_box">
-                                                   <p>${product_price}₩</p>
-                                                   <button class="btn btn-outline" aria-label="heart" onclick='toggle_like("${eachId}")' >
-                                                   <i class="fa ${class_heart}" aria-hidden="true">
-                                                   <span class="like-num">${likeCounts}</span>
-</i>
-                                                   </button>
-                                                    </div>
-                                                    
-                                                     
-                                                </div>
-                                             </div>
-                            `
+                                        <div id= ${eachId} class="card" style="width: 18rem; height: 25rem;">
+                                            <p class="card_cvs" id="cvs_name">${conveni_store}</p>
+                                            <img class="card-img-top" src="${product_img}" alt="Card image cap">
+                                            <div class="card-body">
+                                               <p class="product_name">${product_name}</p>
+                                                    <span class="price_like">
+                                                       ${product_price}₩
+                                                       <button class="btn btn-outline" aria-label="heart" onclick='toggle_like("${eachId}")' >
+                                                           <i class="fa ${class_heart}" aria-hidden="true">
+                                                           <span class="like-num">${likeCounts}</span></i>
+                                                       </button>
+                                                    </span>
+                                         </div>
+                                         </div> 
+                                    `
                     $("#post-box").append(html_temp)
                 }
             }
@@ -89,9 +86,8 @@ function get_beverages() {
 const onClickLogOut = () => {
     console.log("click")
     $.removeCookie('mytoken', {path: '/'});
-    alert('로그아웃 합니다')
+    alert('로그아웃 되었습니다.')
     window.location.href = "/login"
-
 }
 
 const handleButtonClick = (store) => {
@@ -121,28 +117,22 @@ const handleButtonClick = (store) => {
 
                         let html_temp = `
                                             <div id= ${eachId} class="card" style="width: 18rem; height: 25rem;">
-                                            <p>${conveni_store}</p>
+                                                <p class="card_cvs" id="cvs_name">${conveni_store}</p>
                                                 <img class="card-img-top" src="${product_img}" alt="Card image cap">
                                                 <div class="card-body">
-                                                   <p class="card-text">${product_name}</p>
-                                                   <div class="price_like_box">
-                                                   <p>${product_price}₩</p>
-                                                   <button class="btn btn-outline" aria-label="heart" onclick='toggle_like("${eachId}")' >
-                                                   <i class="fa ${class_heart}" aria-hidden="true">
-                                                   <span class="like-num">${likeCounts}</span></i>
-                                                   </button>
-                                                    </div>
-                                                    
-                                                     
-                                                </div>
+                                                   <p class="product_name">${product_name}</p>
+                                                        <span class="price_like">
+                                                           ${product_price}₩
+                                                           <button class="btn btn-outline" aria-label="heart" onclick='toggle_like("${eachId}")' >
+                                                               <i class="fa ${class_heart}" aria-hidden="true">
+                                                               <span class="like-num">${likeCounts}</span></i>
+                                                           </button>
+                                                        </span>
                                              </div>
-                        `
-
+                                             </div>
+                                        `
                         $("#post-box").append(html_temp)
                     }
-
-
-
                 }
 
             }
