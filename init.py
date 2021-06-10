@@ -4,7 +4,7 @@ import requests
 from pymongo import MongoClient
 
 ## 몽고db 셋팅
-client = MongoClient('mongodb://54.180.135.167', 27017, username="test", password="test")
+client = MongoClient('mongodb://15.164.164.56', 27017, username="test", password="test")
 db = client.oneplusone
 
 

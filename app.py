@@ -11,7 +11,7 @@ app.config['UPLOAD_FOLDER'] = "./static/profile_pics"
 
 SECRET_KEY = "ONEPLUSONE"
 
-client = MongoClient('mongodb://54.180.135.167', 27017, username="test", password="test")
+client = MongoClient('mongodb://15.164.164.56', 27017, username="test", password="test")
 db = client.oneplusone
 
 
