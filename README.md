@@ -1,2 +1,2 @@
-# One + One
-항해99 Chapter 1 23조 One + One Project
+# 첫 팀 프로젝트
+로그인/회원가입
